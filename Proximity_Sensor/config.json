@@ -1,0 +1,16 @@
+{
+  "server": {
+    "tcp_port": 5000,
+    "websocket_port": 8080,
+    "max_clients": 10,
+    "log_file": "server.log"
+  },
+  "sensors": {
+    "update_interval": 2000,
+    "distance_thresholds": {
+      "critical": 10,
+      "warning": 30,
+      "caution": 50
+    }
+  }
+}

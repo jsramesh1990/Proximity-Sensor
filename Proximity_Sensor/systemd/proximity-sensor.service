@@ -1,0 +1,16 @@
+# systemd/proximity-sensor.service
+[Unit]
+Description=Proximity Sensor System
+After=network.target
+
+[Service]
+Type=forking
+User=%i
+WorkingDirectory=/opt/proximity-sensor
+ExecStart=/opt/proximity-sensor/run-project.sh
+ExecStop=/opt/proximity-sensor/run-project.sh stop
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

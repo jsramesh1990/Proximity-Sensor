@@ -1,0 +1,23 @@
+# Dockerfile.client
+FROM gcc:11 as builder
+
+# Install dependencies
+RUN apt-get update && apt-get install -y \
+    libjansson-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+COPY sensor_client.c /app/
+
+# Compile client
+RUN gcc -o sensor_client sensor_client.c -lpthread -ljansson -lm
+
+# Runtime image
+FROM ubuntu:22.04
+WORKDIR /app
+COPY --from=builder /app/sensor_client /app/
+COPY run_client.sh /app/
+
+RUN chmod +x /app/run_client.sh
+
+CMD ["/app/run_client.sh"]
