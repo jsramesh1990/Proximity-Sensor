@@ -22,6 +22,11 @@ This project implements a complete IoT-style proximity monitoring system using t
 
 ##  System Architecture
 
+<img width="629" height="201" alt="flow" src="https://github.com/user-attachments/assets/ded47a2a-1e38-40ef-a498-41c83e7417c4" />
+
+
+
+
 ```
 <img width="629" height="201" alt="flow" src="https://github.com/user-attachments/assets/51183aac-b191-409c-922d-5b3aa264eade" />
 
