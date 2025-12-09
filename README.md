@@ -26,20 +26,6 @@ This project implements a complete IoT-style proximity monitoring system using t
 
 
 
-
-```
-<img width="629" height="201" alt="flow" src="https://github.com/user-attachments/assets/51183aac-b191-409c-922d-5b3aa264eade" />
-
-
-
-┌─────────────────┐    TCP/JSON    ┌─────────────────┐    WebSocket    ┌─────────────────┐
-│                 ├────────────────►│                 ├────────────────►│                 │
-│   C Client      │                │   C++ Server    │                 │   Python        │
-│  (Sensor Node)  │                │   (Middleware)  │                 │   Dashboard     │
-│                 │◄───────────────┤                 │◄────────────────┤                 │
-└─────────────────┘    ACK         └─────────────────┘    Broadcast    └─────────────────┘
-```
-
 ### Workflow
 
 1. **Sensor Data Collection** (C Client)
