@@ -13,9 +13,6 @@ pip3 install websocket-client pandas matplotlib
 # 4. Compile and run
 ./run-project.sh
 
-
-
-
 # Build and run with Docker Compose
 docker-compose up --build
 
