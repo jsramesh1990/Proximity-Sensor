@@ -199,7 +199,7 @@ int main(int argc, char const *argv[]) {
     printf("Press Enter to stop all sensors...\n");
     getchar();
     
-    // Stop all sensors
+    // Stop all sensors at a time
     for (int i = 0; i < sensor_count; i++) {
         sensors[i].running = 0;
     }
