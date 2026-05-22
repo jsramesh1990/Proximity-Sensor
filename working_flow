@@ -1,20 +1,20 @@
 # **Complete Workflow Documentation**
 
-## **📖 Project Workflow in Detail**
+## ** Project Workflow in Detail**
 
 ### **1. Overall System Flow**
 
 The proximity sensor monitoring system follows a **three-tier architecture** where each component handles specific responsibilities:
 
 ```
-┌─────────────┐   ┌─────────────┐   ┌─────────────┐
-│   TIER 1    │   │   TIER 2    │   │   TIER 3    │
+┌─────────────┐   ┌─────────────┐   ┌────────────-─┐
+│   TIER 1    │   │   TIER 2    │   │   TIER 3     │
 │  Data       │   │  Processing │   │  Presentation│
-│  Acquisition│   │  & Storage  │   │  & Control  │
-│             │   │             │   │             │
-│  C Client   │──▶│  C++ Server │──▶│  Python     │
+│  Acquisition│   │  & Storage  │   │  & Control   │
+│             │   │             │   │              │
+│  C Client   │──▶│  C++ Server │──▶│  Python      │
 │  (Sensors)  │   │  (Middleware)│   │  Dashboard  │
-└─────────────┘   └─────────────┘   └─────────────┘
+└─────────────┘   └─────────────┘   └────────────-─┘
       │                  │                  │
   Physical        Data Processing    User Interaction
   Hardware            Logic           & Visualization
@@ -157,13 +157,13 @@ Docker provides:
 ┌─────────────────────────────────────────────────┐
 │              Docker Host System                 │
 │                                                 │
-│  ┌────────────┐  ┌────────────┐  ┌────────────┐│
-│  │            │  │            │  │            ││
-│  │   C++      │  │   C        │  │   Python   ││
-│  │  Server    │  │  Client    │  │  Dashboard ││
-│  │  Container │  │  Container │  │  Container ││
-│  │            │  │            │  │            ││
-│  └─────┬──────┘  └─────┬──────┘  └─────┬──────┘│
+│  ┌────────────┐  ┌────────────┐  ┌────────────┐ │
+│  │            │  │            │  │            │ │
+│  │   C++      │  │   C        │  │   Python   │ │
+│  │  Server    │  │  Client    │  │  Dashboard │ │
+│  │  Container │  │  Container │  │  Container │ │
+│  │            │  │            │  │            │ │
+│  └─────┬──────┘  └─────┬──────┘  └─────┬──────┘ │
 │        │                │                │      │
 │        └────────────────┼────────────────┘      │
 │                         │                       │
