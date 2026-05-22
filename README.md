@@ -248,7 +248,7 @@ docker-compose down
 
 ---
 
-# 📡 Communication Protocols
+#  Communication Protocols
 
 ## Client → Server (TCP)
 
@@ -303,7 +303,7 @@ docker-compose down
 
 ---
 
-# 🔧 Configuration
+#  Configuration
 
 Edit `config.json`
 
@@ -363,7 +363,7 @@ wscat -c ws://localhost:8080/sensors
 
 ---
 
-# 🛠 Troubleshooting
+#  Troubleshooting
 
 ## Port Conflict
 
